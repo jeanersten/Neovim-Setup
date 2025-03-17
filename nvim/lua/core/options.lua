@@ -5,6 +5,7 @@ vim.o.breakindent = true
 vim.o.clipboard = "unnamedplus"
 vim.o.conceallevel = 0
 vim.o.expandtab = true
+vim.o.fillchars = "eob: "
 vim.o.hlsearch = false
 vim.o.ignorecase = true
 vim.o.linebreak = true

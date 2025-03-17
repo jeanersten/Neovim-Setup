@@ -17,7 +17,7 @@ return {
     }
 
     dashboard.section.buttons.val = {
-      dashboard.button("f", "󰍉   Find File", "<CMD> Telescope find_files <CR>"),
+      dashboard.button("f", "󰍉   Open Explorer", "<CMD> Telescope file_browser <CR>"),
       dashboard.button("c", "󰓙   Check Health", "<CMD> checkhealth <CR>"),
       dashboard.button("q", "󰈆   Quit", "<CMD> qa! <CR>"),
     }
@@ -33,7 +33,6 @@ return {
       callback = function()
         vim.keymap.set("n", "<ScrollWheelUp>", "<Nop>", { buffer = true })
         vim.keymap.set("n", "<ScrollWheelDown>", "<Nop>", { buffer = true })
-        vim.keymap.set("n", "<leader>e", "<Nop>", { buffer = true })
       end,
     })
   end,

@@ -1,7 +1,7 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
-		local explorer = {
+		local default = {
 			filetypes = { "minifiles", "toggleterm", "TelescopePrompt" },
 			sections = {
 				lualine_a = { "mode" },
@@ -32,7 +32,7 @@ return {
 				lualine_y = { "progress" },
 				lualine_z = { "location" },
 			},
-			extensions = { explorer },
+			extensions = { default },
 		})
 	end,
 }

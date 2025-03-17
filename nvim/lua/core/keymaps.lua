@@ -42,12 +42,16 @@ vim.keymap.set("n", "<leader>bx", "<CMD> Bdelete! <CR>", opts)
 vim.keymap.set("n", "<Tab>", "<CMD> bnext <CR>", opts)
 vim.keymap.set("n", "<S-Tab>", "<CMD> bprevious <CR>", opts)
 
--- Termina l
+-- Terminal
 vim.keymap.set({ "n", "t" }, "<M-t>", "<cmd> ToggleTerm <CR>", opts)
 vim.keymap.set("t", "df", [[<C-\><C-n>]], opts)
 
 -- Explore
-vim.keymap.set("n", "<leader>e", "<CMD> :lua MiniFiles.open() <CR>", opts)
+vim.keymap.set("n", "<leader>se", "<CMD> Telescope file_browser <CR>", opts)
+vim.keymap.set("n", "<leader>sf", "<CMD> Telescope find_files <CR>", opts)
+vim.keymap.set("n", "<leader>sg", "<CMD> Telescope live_grep <CR>", opts)
+vim.keymap.set("n", "<leader>sb", "<CMD> Telescope buffers <CR>", opts)
+vim.keymap.set("n", "<leader>sh", "<CMD> Telescope help_tags <CR>", opts)
 
 -- Language Server Protocol
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
@@ -63,12 +67,6 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 -- Formatter
 vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, opts)
 
--- Finder
-vim.keymap.set("n", "<leader>sf", "<CMD> Telescope find_files <CR>", opts)
-vim.keymap.set("n", "<leader>sg", "<CMD> Telescope live_grep <CR>", opts)
-vim.keymap.set("n", "<leader>sb", "<CMD> Telescope buffers <CR>", opts)
-vim.keymap.set("n", "<leader>sh", "<CMD> Telescope help_tags <CR>", opts)
-
 -- Diagnostics
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
@@ -79,7 +77,7 @@ vim.keymap.set("n", "<leader>cl", vim.diagnostic.setloclist, opts)
 vim.keymap.set("n", ";", ":", {})
 vim.keymap.set("i", "df", "<ESC>", {})
 vim.keymap.set("n", "x", '"_x', opts)
-vim.keymap.set("v", "p", '"_dp', opts)
+vim.keymap.set("v", "p", '"_P', opts)
 vim.keymap.set("v", "<", "<gv", opts)
 vim.keymap.set("v", ">", ">gv", opts)
 vim.keymap.set("n", "<leader>sn", "<CMD> noautocmd w <CR>", opts)
